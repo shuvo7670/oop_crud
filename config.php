@@ -47,6 +47,8 @@ class Config {
             die();
         }
 
+    }
+
         
 
 }

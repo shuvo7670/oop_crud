@@ -74,37 +74,7 @@ class Main {
                 </div>
             </div>>
                 <title style="color: black;"></title>
-                <style>
-                    table {
-                    width: 80%;
-                    border-collapse: collapse;
-                    margin: 50px auto;
-                    }
-                    th, td {
-                    border: 1px solid #333;
-                    padding: 20px;
-                    text-align: center;
-                    }
-                    th {
-                    background-color: #f2f2f2;
-                    }
-                    img {
-                    width: 60px;
-                    height: 60px;
-                    object-fit: cover;
-                    border-radius: 50%;
-                    }
-
-                    .primary {
-                    background-color: #007bff;
-                    color: white;
-                    padding: 10px 20px;
-                    border: none;
-                    border-radius: 5px;
-                    text-decoration: none;
-                    }
-
-                </style>
+                
                 </head>
        
         <?php
