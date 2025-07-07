@@ -72,9 +72,6 @@ class Main {
                 <div style="float: right;" class="actions-button">
                     <a href="create.php" class="primary">+ Add New User</a>
                 </div>
-            </div>>
-                <title style="color: black;"></title>
-                
                 </head>
        
         <?php
