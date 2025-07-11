@@ -1,0 +1,45 @@
+{
+    "name": "hemiframe/php-query-builder",
+    "description": "Powerful and lightweight PHP SQL Query Builder",
+    "version": "2.1.2",
+    "keywords": [
+        "PHP",
+        "SQL builder",
+        "Query Builder"
+    ],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Martin",
+            "email": "heminei@heminei.com",
+            "role": "Developer"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/heminei/php-query-builder/issues"
+    },
+    "autoload": {
+        "psr-4": {
+            "HemiFrame\\": "src/HemiFrame"
+        }
+    },
+    "require": {
+        "php": ">=8.0",
+        "psr/simple-cache": "^2.0"
+    },
+    "require-dev": {
+        "friendsofphp/php-cs-fixer": "^3.65",
+        "phpstan/phpstan": "^2.0"
+    },
+    "scripts": {
+        "php-cs-fixer": "php-cs-fixer fix --dry-run --verbose",
+        "php-cs-fixer-apply": "php-cs-fixer fix --verbose",
+        "phpstan": [
+            "phpstan analyse"
+        ],
+        "build": [
+            "composer run-script php-cs-fixer",
+            "composer run-script phpstan"
+        ]
+    }
+}

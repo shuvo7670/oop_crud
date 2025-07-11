@@ -1,0 +1,5 @@
+{
+    "require": {
+        "hemiframe/php-query-builder": "^2.1"
+    }
+}

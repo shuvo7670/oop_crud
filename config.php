@@ -1,5 +1,4 @@
 <?php
-
 class Config {
 
     static public function connect() {
@@ -13,16 +12,33 @@ class Config {
     }
 
     static function store_user($name, $designation, $phone_number, $gender, $image) {
+        // $connection = self::connect();
+        require_once './vendor/autoload.php';
+        $pdo = new \PDO('mysql:host=localhost;dbname=user_bd', 'root', '', [
+            \PDO::ATTR_ERRMODE => \PDO::ERRMODE_EXCEPTION,
+        ]);
+        $pdo->exec("set names utf8");
+        // Set as default for all query instances
+        \HemiFrame\Lib\SQLBuilder\Query::$global['pdo'] = $pdo;
+        $query = new \HemiFrame\Lib\SQLBuilder\Query();
 
 
-        $connection = self::connect();
-        $sql = "INSERT INTO user_table('name', 'designation', 'phone_number', 'gender_id', 'image') VALUES ('{$name}', '{$designation}', '{$phone_number}', '{$gender}', '{$image}')";
-        if( $connection->query($sql)=== TRUE) {
-            header("Location: index.php");
-        } else {
-            print_r( $connection->error);
-            die();
-        } 
+
+
+
+
+
+        $query->insertInto("user_table")->set([
+            "name"         => $name,
+            "designation"  => $designation,
+            "phone_number" => $phone_number,
+            "gender_id"    => $gender,
+            "image"        => $image,
+        ]);
+        $query->execute();
+
+
+        
     }
 
     static public function add_user($gender_name) {
